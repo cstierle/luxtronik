@@ -54,24 +54,24 @@ OPERATION_MAPPING: dict[str, str] = {
 }
 
 WATER_HEATERS: list[LuxtronikWaterHeaterDescription] = [
-    LuxtronikWaterHeaterDescription(
-        key=SensorKey.DOMESTIC_WATER,
-        operation_list=[STATE_OFF, STATE_HEAT_PUMP, STATE_ELECTRIC, STATE_PERFORMANCE],
-        supported_features=WaterHeaterEntityFeature.OPERATION_MODE
-        | WaterHeaterEntityFeature.TARGET_TEMPERATURE
-        | WaterHeaterEntityFeature.AWAY_MODE,
-        luxtronik_key=LP.P0004_MODE_DHW,
-        luxtronik_key_current_temperature=LC.C0017_DHW_TEMPERATURE,
-        luxtronik_key_target_temperature=LP.P0002_DHW_TARGET_TEMPERATURE,
-        luxtronik_key_current_action=LC.C0080_STATUS,
-        luxtronik_action_heating=LuxOperationMode.domestic_water,
-        # luxtronik_key_target_temperature_high=LuxParameter,
-        # luxtronik_key_target_temperature_low=LuxParameter,
-        icon="mdi:water-boiler",
-        temperature_unit=UnitOfTemperature.CELSIUS,
-        visibility=LV.V0029_DHW_TEMPERATURE,
-        max_firmware_version=Version("3.90.0"),
-    ),
+    # LuxtronikWaterHeaterDescription(
+    #     key=SensorKey.DOMESTIC_WATER,
+    #     operation_list=[STATE_OFF, STATE_HEAT_PUMP, STATE_ELECTRIC, STATE_PERFORMANCE],
+    #     supported_features=WaterHeaterEntityFeature.OPERATION_MODE
+    #     | WaterHeaterEntityFeature.TARGET_TEMPERATURE
+    #     | WaterHeaterEntityFeature.AWAY_MODE,
+    #     luxtronik_key=LP.P0004_MODE_DHW,
+    #     luxtronik_key_current_temperature=LC.C0017_DHW_TEMPERATURE,
+    #     luxtronik_key_target_temperature=LP.P0002_DHW_TARGET_TEMPERATURE,
+    #     luxtronik_key_current_action=LC.C0080_STATUS,
+    #     luxtronik_action_heating=LuxOperationMode.domestic_water,
+    #     # luxtronik_key_target_temperature_high=LuxParameter,
+    #     # luxtronik_key_target_temperature_low=LuxParameter,
+    #     icon="mdi:water-boiler",
+    #     temperature_unit=UnitOfTemperature.CELSIUS,
+    #     visibility=LV.V0029_DHW_TEMPERATURE,
+    #     max_firmware_version=Version("3.90.0"),
+    # ),
     LuxtronikWaterHeaterDescription(
         key=SensorKey.DOMESTIC_WATER,
         operation_list=[STATE_OFF, STATE_HEAT_PUMP, STATE_ELECTRIC, STATE_PERFORMANCE],
@@ -88,7 +88,7 @@ WATER_HEATERS: list[LuxtronikWaterHeaterDescription] = [
         icon="mdi:water-boiler",
         temperature_unit=UnitOfTemperature.CELSIUS,
         visibility=LV.V0029_DHW_TEMPERATURE,
-        min_firmware_version=Version("3.90.1"),
+        # min_firmware_version=Version("3.90.1"),
     ),
 ]
 # endregion Const

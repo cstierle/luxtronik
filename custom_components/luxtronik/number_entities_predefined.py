@@ -484,20 +484,20 @@ NUMBER_SENSORS: list[LuxtronikNumberDescription] = [
     ),
     # endregion Heating
     # region Domestic water
-    LuxtronikNumberDescription(
-        key=SensorKey.DHW_TARGET_TEMPERATURE,
-        luxtronik_key=LP.P0002_DHW_TARGET_TEMPERATURE,
-        device_key=DeviceKey.domestic_water,
-        mode=NumberMode.BOX,
-        icon="mdi:thermometer-water",
-        device_class=SensorDeviceClass.TEMPERATURE,
-        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
-        native_min_value=5.0,
-        native_max_value=65.0,
-        native_step=0.5,
-        max_firmware_version=Version("3.90.0"),
-        update_interval=None,
-    ),
+    # LuxtronikNumberDescription(
+    #     key=SensorKey.DHW_TARGET_TEMPERATURE,
+    #     luxtronik_key=LP.P0002_DHW_TARGET_TEMPERATURE,
+    #     device_key=DeviceKey.domestic_water,
+    #     mode=NumberMode.BOX,
+    #     icon="mdi:thermometer-water",
+    #     device_class=SensorDeviceClass.TEMPERATURE,
+    #     native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+    #     native_min_value=5.0,
+    #     native_max_value=65.0,
+    #     native_step=0.5,
+    #     max_firmware_version=Version("3.90.0"),
+    #     update_interval=None,
+    # ),
     # Bug #280 since firmware 3.90.1 different set point
     LuxtronikNumberDescription(
         key=SensorKey.DHW_TARGET_TEMPERATURE,
@@ -510,7 +510,7 @@ NUMBER_SENSORS: list[LuxtronikNumberDescription] = [
         native_min_value=5.0,
         native_max_value=65.0,
         native_step=0.5,
-        min_firmware_version=Version("3.90.1"),
+        # min_firmware_version=Version("3.90.1"),
         update_interval=None,
     ),
     LuxtronikNumberDescription(

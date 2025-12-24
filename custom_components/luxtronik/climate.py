@@ -122,32 +122,32 @@ THERMOSTATS: list[LuxtronikClimateDescription] = [
         temperature_unit=UnitOfTemperature.CELSIUS,
         # visibility=LuxVisibility.V0023_FLOW_IN_TEMPERATURE,
         device_key=DeviceKey.heating,
-        min_firmware_version=Version("3.90.1"),
+        # min_firmware_version=Version("3.90.1"),
     ),
-    LuxtronikClimateDescription(
-        key=SensorKey.HEATING,
-        hvac_modes=[HVACMode.HEAT, HVACMode.OFF],
-        hvac_mode_mapping=HVAC_MODE_MAPPING_HEAT,
-        hvac_action_mapping=HVAC_ACTION_MAPPING_HEAT,
-        preset_modes=[PRESET_NONE, PRESET_AWAY, PRESET_BOOST],
-        supported_features=ClimateEntityFeature.PRESET_MODE
-        | ClimateEntityFeature.TURN_OFF  # noqa: W503
-        | ClimateEntityFeature.TURN_ON  # noqa: W503
-        | ClimateEntityFeature.TARGET_TEMPERATURE,  # noqa: W503
-        luxtronik_key=LuxParameter.P0003_MODE_HEATING,
-        luxtronik_key_target_temperature=LuxCalculation.C0228_ROOM_THERMOSTAT_TEMPERATURE_TARGET,
-        luxtronik_key_current_action=LuxCalculation.C0080_STATUS,
-        luxtronik_action_active=LuxOperationMode.heating.value,
-        # luxtronik_key_target_temperature_high=LuxParameter,
-        # luxtronik_key_target_temperature_low=LuxParameter,
-        luxtronik_key_correction_factor=LuxParameter.P0980_HEATING_ROOM_TEMPERATURE_IMPACT_FACTOR,
-        luxtronik_key_correction_target=LuxParameter.P0001_HEATING_TARGET_CORRECTION,
-        icon_by_state=LUX_STATE_ICON_MAP,
-        temperature_unit=UnitOfTemperature.CELSIUS,
-        # visibility=LuxVisibility.V0023_FLOW_IN_TEMPERATURE,
-        device_key=DeviceKey.heating,
-        max_firmware_version=Version("3.90.0"),
-    ),
+    # LuxtronikClimateDescription(
+    #     key=SensorKey.HEATING,
+    #     hvac_modes=[HVACMode.HEAT, HVACMode.OFF],
+    #     hvac_mode_mapping=HVAC_MODE_MAPPING_HEAT,
+    #     hvac_action_mapping=HVAC_ACTION_MAPPING_HEAT,
+    #     preset_modes=[PRESET_NONE, PRESET_AWAY, PRESET_BOOST],
+    #     supported_features=ClimateEntityFeature.PRESET_MODE
+    #     | ClimateEntityFeature.TURN_OFF  # noqa: W503
+    #     | ClimateEntityFeature.TURN_ON  # noqa: W503
+    #     | ClimateEntityFeature.TARGET_TEMPERATURE,  # noqa: W503
+    #     luxtronik_key=LuxParameter.P0003_MODE_HEATING,
+    #     luxtronik_key_target_temperature=LuxCalculation.C0228_ROOM_THERMOSTAT_TEMPERATURE_TARGET,
+    #     luxtronik_key_current_action=LuxCalculation.C0080_STATUS,
+    #     luxtronik_action_active=LuxOperationMode.heating.value,
+    #     # luxtronik_key_target_temperature_high=LuxParameter,
+    #     # luxtronik_key_target_temperature_low=LuxParameter,
+    #     luxtronik_key_correction_factor=LuxParameter.P0980_HEATING_ROOM_TEMPERATURE_IMPACT_FACTOR,
+    #     luxtronik_key_correction_target=LuxParameter.P0001_HEATING_TARGET_CORRECTION,
+    #     icon_by_state=LUX_STATE_ICON_MAP,
+    #     temperature_unit=UnitOfTemperature.CELSIUS,
+    #     # visibility=LuxVisibility.V0023_FLOW_IN_TEMPERATURE,
+    #     device_key=DeviceKey.heating,
+    #     max_firmware_version=Version("3.90.0"),
+    # ),
     LuxtronikClimateDescription(
         key=SensorKey.COOLING,
         hvac_modes=[HVACMode.COOL, HVACMode.OFF],
